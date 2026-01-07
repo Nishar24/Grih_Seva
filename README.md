@@ -1,19 +1,32 @@
-# HomeEase - Full MERN Project (Windows-ready)
+# Grih Seva – Full MERN Project
 
-This archive contains a working starter full-stack project with:
-- Backend: Node/Express/MongoDB, JWT auth, helper CRUD, requests, socket chat, Razorpay & Nodemailer placeholders
-- Frontend: React + Tailwind skeleton, pages for auth, helpers, profile, chat ready
+## 🚀 Overview
+HomeEase is a full-stack MERN application designed to connect users with home service providers.
 
-## Run locally (Windows)
-1. Extract archive
-2. Backend:
-   - Open terminal: cd backend
-   - copy .env.example -> .env and fill values
-   - npm install
-   - npm run dev
-3. Frontend:
-   - Open another terminal: cd frontend
-   - npm install
-   - Create `.env` with `REACT_APP_API_URL=http://localhost:5000`
-   - npm start
+## 🛠 Tech Stack
+Frontend: React, Tailwind CSS  
+Backend: Node.js, Express.js  
+Database: MongoDB  
+Authentication: JWT  
 
+## ✨ Features
+- User authentication (JWT)
+- Role-based access (User / Admin)
+- CRUD operations
+- Responsive UI
+
+## ▶️ Run Locally
+### Backend
+cd backend  
+npm install  
+npm run dev  
+
+### Frontend
+cd frontend  
+npm install  
+npm start  
+
+## 📌 Future Enhancements
+- Payment integration
+- Admin dashboard
+- Deployment
