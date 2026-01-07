@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========== CUSTOM PROPERTIES ========== */
+:root {
+  --primary: #7b2ff7;
+  --accent: #ff6a88;
+  --primary-light: #9d5af9;
+  --accent-light: #ff8fa3;
+}
+
+/* ========== BASE STYLES ========== */
+body {
+  background: linear-gradient(180deg, #f8fbff 0%, #eef6ff 100%);
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* ========== GLASS MORPHISM COMPONENT ========== */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 
+    0 8px 32px rgba(16, 24, 40, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+}
+
+/* ========== GRADIENT BUTTON COMPONENT ========== */
+.btn-gradient {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  background-size: 200% 200%;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(135deg, var(--primary-light), var(--accent-light));
+  box-shadow: 
+    0 12px 40px rgba(123, 47, 247, 0.3),
+    0 4px 12px rgba(255, 106, 136, 0.2);
+  transform: translateY(-2px);
+}
+
+.btn-gradient:active {
+  transform: translateY(0);
+}
+
+/* ========== CUSTOM UTILITY CLASSES ========== */
+@layer components {
+  
+  /* GRADIENT TEXT */
+  .text-gradient {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* CARD HOVER EFFECTS */
+  .card-hover {
+    transition: all 0.3s ease;
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(16, 24, 40, 0.12);
+  }
+
+  /* INPUT FOCUS STATES */
+  .input-focus {
+    @apply border-gray-200 focus:border-[#7b2ff7] focus:ring-2 focus:ring-[#7b2ff7]/20;
+  }
+
+  /* GRADIENT BORDER */
+  .border-gradient {
+    border: 2px solid transparent;
+    background: 
+      linear-gradient(white, white) padding-box,
+      linear-gradient(135deg, var(--primary), var(--accent)) border-box;
+  }
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ========== SCROLLBAR STYLING ========== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--primary), var(--accent));
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(var(--primary-light), var(--accent-light));
+}
+
+/* ========== SELECTION STYLING ========== */
+::selection {
+  background: rgba(123, 47, 247, 0.2);
+  color: var(--primary);
+}
+
+/* ========== RESPONSIVE DESIGN ENHANCEMENTS ========== */
+@media (max-width: 768px) {
+  .glass {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+}
+
+/* ========== LOADING ANIMATIONS ========== */
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
+/* ========== FOCUS VISIBLE FOR ACCESSIBILITY ========== */
+.focus-visible:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
