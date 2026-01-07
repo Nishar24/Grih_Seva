@@ -1,7 +1,7 @@
 # Grih Seva – Full MERN Project
 
 ## 🚀 Overview
-HomeEase is a full-stack MERN application designed to connect users with home service providers.
+Grih Seva is a full-stack MERN application designed to connect users with home service providers.
 
 ## 🛠 Tech Stack
 Frontend: React, Tailwind CSS  
