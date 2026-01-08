@@ -9,6 +9,7 @@ export default function HelperCard({ helper }) {
       <div className="flex items-center gap-4">
         
         {/* ========== AVATAR SECTION ========== */}
+        
         <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center border-2 border-white shadow-md">
           <span className="text-2xl">👩‍🍳</span>
         </div>
@@ -46,4 +47,5 @@ export default function HelperCard({ helper }) {
       </div>
     </div>
   );
+
 }
